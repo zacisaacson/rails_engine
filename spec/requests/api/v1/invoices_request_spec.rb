@@ -104,7 +104,7 @@ describe "Invoices API" do
     expect(response).to be_successful
 
     invoice_json_1 = JSON.parse(response.body)
-    binding.pry
+    
     expect(invoice_json_1['data'].length).to eq(2)
 
     get "/api/v1/invoices/find_all?merchant_id=#{@merchant_2.id}"
