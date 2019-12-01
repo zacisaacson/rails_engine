@@ -6,6 +6,8 @@ Rails.application.routes.draw do
          get '/find', to: 'query#find'
          get '/find_all', to: 'query#find_all'
          get '/random', to: 'query#random'
+         get '/:id/items', to: 'items#index'
+         get '/:id/invoices', to: 'invoices#index'
        end
        namespace :customers do
          get '/find', to: 'query#find'
