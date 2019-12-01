@@ -4,7 +4,7 @@ class Api::V1::Invoices::QueryController < ApplicationController
   end
 
   def find_all
-    render json: InvoiceSerializer.new(Invoice.where(invoice_params))
+    render json: InvoiceSerializer.new(Invoice.where(invoice_params).order('id ASC'))
   end
 
   def random
