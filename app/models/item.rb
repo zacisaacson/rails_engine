@@ -1,6 +1,9 @@
 require_relative 'modules/convertable'
 
 class Item < ApplicationRecord
+  include Convertable
+  before_save :convert_to_currency
+
   validates_presence_of :name,
                         :description,
                         :unit_price
