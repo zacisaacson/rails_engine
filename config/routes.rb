@@ -8,6 +8,7 @@ Rails.application.routes.draw do
          get '/random', to: 'query#random'
          get '/:id/items', to: 'items#index'
          get '/:id/invoices', to: 'invoices#index'
+         get '/most_revenue', to: 'revenue#index'
        end
        namespace :customers do
          get '/find', to: 'query#find'
